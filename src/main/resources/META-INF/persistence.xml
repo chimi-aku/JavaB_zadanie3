@@ -8,6 +8,8 @@
         <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
         <class>wipb.jpademo.model.User</class>
         <class>wipb.jpademo.model.UserGroup</class>
+        <class>wipb.jpademo.model.Account</class>
+        <class>wipb.jpademo.model.AccountOperation</class>
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:h2:file:./h2data;"/>
             <property name="javax.persistence.jdbc.user" value="sa"/>
