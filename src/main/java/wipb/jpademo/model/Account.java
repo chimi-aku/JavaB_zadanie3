@@ -24,6 +24,22 @@ public class Account extends AbstractModel {
 
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public List<AccountOperation> getAccountOperations() {
+        return accountOperations;
+    }
+
+    public void setAccountOperations(List<AccountOperation> accountOperations) {
+        this.accountOperations = accountOperations;
+    }
+
     public Account(Long id, String name, String address, BigDecimal balance) {
         this.name = name;
         this.address = address;

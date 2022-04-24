@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+    <Appenders>
+
+        <RollingFile
+                name="FileAppender"
+                fileName="bank-logs.log"
+                filePattern="bank-logs.%i.log"
+                ignoreExceptions="false"
+                append="true">
+            <PatternLayout>
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %p %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <OnStartupTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="10 KB" />
+            </Policies>
+            <TimeBasedTriggeringPolicy />
+            <DefaultRolloverStrategy max="1"/>
+			<appendToFile value="true" />
+			<param name="Append" value="TRUE"/>
+        </RollingFile>
+		
+    </Appenders>
+    <Loggers>
+        <Root level="debug">
+            <AppenderRef ref="FileAppender"/>
+        </Root>
+    </Loggers>
+</Configuration>
