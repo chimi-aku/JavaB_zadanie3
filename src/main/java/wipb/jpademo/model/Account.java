@@ -38,4 +38,21 @@ public class Account extends AbstractModel {
         return balance;
     }
 
+
+    public String getName() {
+        return name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public String toString() {
+        return "Account{" +
+                "id=" + this.getId() +
+                ", name='" + this.getName() + '\'' +
+                ", address='" + this.getAddress() + '\'' +
+                ", balance='" + this.getBalance() + '\'' +
+                '}';
+    }
 }
