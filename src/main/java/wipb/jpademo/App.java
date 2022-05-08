@@ -53,16 +53,34 @@ public class App {
 
         BankImpl bank = new BankImpl();
 
-        System.out.println(bank.getBalance(2L));;
-        bank.deposit(2L, BigDecimal.valueOf(400));
-        System.out.println(bank.getBalance(2L));;
-        bank.withdraw(2L, BigDecimal.valueOf(100));
-        System.out.println(bank.getBalance(2L));;
+//        System.out.println(bank.getBalance(2L));;
+//        bank.deposit(2L, BigDecimal.valueOf(400));
+//        System.out.println(bank.getBalance(2L));;
+//        bank.withdraw(2L, BigDecimal.valueOf(100));
+//        System.out.println(bank.getBalance(2L));;
+//
+        //bank.createAccount("XD", "123");
+//
+//        bank.transfer(2L, 1603L, BigDecimal.valueOf(500));
+//
 
-        //bank.createAccount("test2", "address2");
+        System.out.println("\n******* TASK 4 *******\n");
 
-        bank.transfer(2L, 1603L, BigDecimal.valueOf(500));
+        AccountDaoJpaImpl accountDaoJpa = new AccountDaoJpaImpl();
 
-
+        System.out.println("\nfindAll");
+        System.out.println(accountDaoJpa.findAll());
+        System.out.println("\nfindByNameAndAddress");
+        System.out.println(accountDaoJpa.findByNameAndAddress("test2", "address2"));
+        System.out.println("\nfindNameStartsWith");
+        System.out.println(accountDaoJpa.findNameStartsWith("te"));
+        System.out.println("\nfindBetweenBalance");
+        System.out.println(accountDaoJpa.findBetweenBalance(BigDecimal.valueOf(200), BigDecimal.valueOf(800)));
+        System.out.println("\nfindWithMaxBalance");
+        System.out.println(accountDaoJpa.findWithMaxBalance());
+        System.out.println("\nfindAccountWithoutAnyOperations");
+        System.out.println(accountDaoJpa.findAccountWithoutAnyOperations());
+        System.out.println("\nfindAccountWithMostOperations");
+        System.out.println(accountDaoJpa.findAccountWithMostOperations());
     }
 }
